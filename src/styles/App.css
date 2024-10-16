@@ -54,34 +54,65 @@ section {
 /* About section styles */
 #about {
   background-color: transparent; /* Keep the about section's background transparent */
+  padding: 40px 20px; /* Add padding for top and bottom to give some breathing space */
 }
 
 .about-container {
   display: flex;               /* Use Flexbox for layout */
-  align-items: flex-start;     /* Align items to the start (top) of the container */
+  flex-wrap: wrap;             /* Allow wrapping for better responsiveness on smaller screens */
+  align-items: center;         /* Center items vertically */
   justify-content: space-between; /* Space between text and image */
-  padding: 20px;              /* Add some padding */
+  gap: 20px;                   /* Add space between text and image */
 }
 
 .about-text {
   flex: 1;                    /* Take available space */
-  max-width: 600px;          /* Limit the width of the text */
-  margin-right: 30px;        /* Increased right margin to create more space between text and image */
+  max-width: 600px;           /* Limit the width of the text */
+  margin-right: 20px;         /* Create space between text and image */
+  line-height: 1.6;           /* Improve readability */
 }
 
 .about-image {
   flex: 1;                    /* Take available space */
   display: flex;              /* Center image in its container */
-  justify-content: flex-end;  /* Align image to the right */
+  justify-content: center;    /* Center-align image for better visual balance */
+  max-width: 500px;           /* Limit the width for better responsiveness */
 }
 
 .about-image img {
-  max-width: 600px;            /* Make sure the image is responsive */
+  width: auto;                /* Maintain aspect ratio */
   height: auto;               /* Maintain aspect ratio */
-  max-height: 450px;          /* Set a maximum height */
-  border-radius: 8px;         /* Optional: Add rounded corners */
-  margin-left: 20px;          /* Optional: Add some left margin to create space */
+  max-width: 100%;            /* Make sure the image does not exceed the container width */
+  max-height: 400px;          /* Set a maximum height to avoid excessive size */
+  border-radius: 8px;         /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center-align text and image */
+    gap: 20px;                /* Adjust gap for smaller screens */
+  }
+
+  .about-text {
+    margin-right: 0;          /* Remove margin when stacked */
+    text-align: center;       /* Center the text for better appearance */
+    max-width: 90%;           /* Allow text to take more space on smaller screens */
+  }
+
+  .about-image {
+    justify-content: center;  /* Center the image in its container */
+    max-width: 90%;           /* Allow image to adjust better on smaller screens */
+    margin-left: 0;           /* Remove left margin */
+  }
+
+  .about-image img {
+    max-height: 300px;        /* Adjust maximum height for smaller screens */
+  }
+}
+
 
 /* Projects section styles */
 #projects {

@@ -1,6 +1,7 @@
 import React from 'react';
 import photo from '../Images/react_photo1.jpg'; // Use relative path without 'my-app/src/'
 
+
 function About() {
   return (
     <section id="about" className="about-container">
@@ -13,6 +14,7 @@ function About() {
           Currently, I’m pursuing my degree at the University of Sri Jayawardenepura while interning at the Export Development Board, 
           where I apply my technical skills in real-world projects. I’m dedicated to continuous learning and eager to connect with others in the tech community!
         </p>
+        <button className="slide-button">Learn More</button> {/* Added sliding button */}
       </div>
       <div className="about-image">
         <img src={photo} alt="Yanushka" /> {/* Correct usage of the imported photo */}
