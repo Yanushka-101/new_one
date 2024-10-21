@@ -27,19 +27,20 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', contactSchema);
 
 // Define the endpoint to receive contact form data
-app.post('/contact', async (req, res) => {
-  const { name, email, message } = req.body;
-
-  try {
-    // Create a new Contact instance and save it to the database
-    const newContact = new Contact({ name, email, message });
-    await newContact.save();
-    res.status(201).json({ message: 'Message sent successfully!' });
-  } catch (error) {
-    console.error('Error saving contact message:', error);
-    res.status(500).json({ error: 'Failed to send message' });
-  }
-});
+app.post('/send-message', async (req, res) => {
+    const { name, email, message } = req.body;
+  
+    try {
+      // Create a new Contact instance and save it to the database
+      const newContact = new Contact({ name, email, message });
+      await newContact.save();
+      res.status(201).json({ message: 'Message sent successfully!' });
+    } catch (error) {
+      console.error('Error saving contact message:', error);
+      res.status(500).json({ error: 'Failed to send message' });
+    }
+  });
+  
 
 // Define the port for your server
 const PORT = process.env.PORT || 5000;

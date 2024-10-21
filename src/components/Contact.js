@@ -19,7 +19,8 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/contact', formData); // Make sure the URL matches your backend server's URL
+      await axios.post('http://localhost:5000/send-message', formData);
+      // Make sure the URL matches your backend server's URL
       alert('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
@@ -29,7 +30,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact">
+    <section id="new">
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <input
