@@ -30,7 +30,7 @@ function Contact() {
   };
 
   return (
-    <section id="new">
+    <section id="contact">
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <input
