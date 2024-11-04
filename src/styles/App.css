@@ -1,44 +1,14 @@
 /* General styles */
 body {
-  background-color: #675c5c; /* Light gray background */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  padding: 20px; /* Optional padding for spacing */
-  min-height: 100vh; /* Prevent horizontal overflow */
+  background-image: url('../Images/6.jpg'); /* Specify the path to your background image */
+  background-size: cover; /* Makes the image cover the entire background */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Keeps the image fixed during scroll */
+  color: #fff; /* Optional: sets the text color */
+  font-family: Arial, sans-serif;
 }
 
-/* Video Background Styles */
-.background-video {
-  position: fixed; /* Make the video fixed */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  min-width: 100%; /* Ensure it covers the full width */
-  min-height: 100%; /* Ensure it covers the full height */
-  width: auto; /* Maintain aspect ratio */
-  height: auto; /* Maintain aspect ratio */
-  z-index: -1; /* Place the video behind content */
-  transform: translate(-50%, -50%); /* Center the video */
-}
 
-/* Other styles remain unchanged */
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px; 
-  right: 20px; 
-  background-color: #007bff; 
-  color: white; 
-  border: none; 
-  border-radius: 5px; 
-  padding: 10px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-  z-index: 1000; 
-  display: none; 
-}
-
-.scroll-to-top.show {
-  display: block; 
-}
 
 /* Main App Container */
 .App {
@@ -58,7 +28,7 @@ section {
 .navbar {
   display: flex;
   justify-content: center; /* Center the navbar items */
-  background-color: #42944286; /* Light gray background */
+  background-color: #bc44f090; /* Light gray background */
   color: #ffffff; /* Darker text color for contrast */
   padding: 0.5rem; /* Smaller padding for a more compact look */
   position: sticky;
@@ -183,7 +153,7 @@ section {
 
 .project {
   flex: 1 1 calc(30% - 20px);
-  background: #42944286; /* Keeping a subtle background for project cards */
+  background: #bc44f090; /* Keeping a subtle background for project cards */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -201,7 +171,7 @@ section {
 form {
   display: flex;
   flex-direction: column;
-  text-shadow: #42944286; /* Note: text-shadow will not apply to form elements */
+  text-shadow: #bc44f090; /* Note: text-shadow will not apply to form elements */
 }
 
 input,
@@ -211,7 +181,7 @@ textarea {
   border: 1px solid #fcfcfc86;
   border-radius: 4px;
   color: #ececec; /* Change this to your desired text color inside the input and textarea */
-  background-color: #42944286; /* Optional: Set background color if needed */
+  background-color: #bc44f090; /* Optional: Set background color if needed */
 }
 
 /* Optional: To style placeholder text */
@@ -224,7 +194,7 @@ button {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #42944286;
+  background-color: #bc44f090;
   color: #fff;
   cursor: pointer;
   font-family: 'Times New Roman', Times, serif;
@@ -238,7 +208,7 @@ button:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #42944286; /* Keep the footer dark for contrast */
+  background-color: #bc44f090; /* Keep the footer dark for contrast */
   color: #ffffffc5;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -257,7 +227,7 @@ footer {
 
 .Certificates {
   flex: 1 1 calc(30% - 20px); /* Each certificate will take 30% width with 20px gap */
-  background: rgba(66, 148, 66, 0.65); /* Subtle green background with transparency */
+  background: #bc44f090; /* Subtle green background with transparency */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
@@ -310,77 +280,68 @@ footer {
   }
 }
 
-
 #experience {
   padding: 50px;
   color: #ffffffc5;
   font-family: 'Times New Roman', Times, serif;
+  position: relative; /* Ensure that child elements are positioned relative to this section */
 }
 
 .Experience-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Stack experiences and navigation buttons vertically */
+  align-items: center;
   gap: 20px;
+  position: relative; /* Make this container relative for button positioning */
 }
 
 .Experience {
-  flex: 1 1 calc(30% - 20px); /* Each experience item will take 30% width with 20px gap */
-  background: rgba(66, 148, 66, 0.65); /* Subtle green background with transparency */
+  width: 100%; /* Take full width inside the list */
+  max-width: 600px; /* Limit width to look good on larger screens */
+  background: #b366ff8f;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
-  position: relative; /* Position relative to show images */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Experience:hover {
-  transform: translateY(-10px); /* Slight lift on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+.Experience h3, .Experience h4, .Experience p {
+  color: #eaeaea;
 }
 
-.Experience h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #fff; /* Ensure text is readable on the background */
+.Experience-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  bottom: 20px; /* Position buttons at the bottom of Experience-list */
 }
 
-.Experience h4 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
-  color: #eaeaea; /* Slightly lighter text for better contrast */
+.Experience-navigation button {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
 }
 
-.Experience p {
-  font-size: 1em;
-  color: #eaeaea; /* Slightly lighter text for better contrast */
-  margin-bottom: 15px;
-}
-
-.experience-image {
-  display: none; /* Initially hide the experience image */
-  position: absolute; /* Position it absolutely within the parent */
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  border: 2px solid #ccc; /* Optional border around the image */
-  border-radius: 8px; /* Match the card's border radius */
-}
-
-.Experience:hover .experience-image {
-  display: block; /* Show the image on hover */
+.Experience-navigation button:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {
   .Experience {
-    flex: 1 1 calc(45% - 20px); /* On medium screens, two cards per row */
+    max-width: 90%; /* Adjust width for medium screens */
   }
 }
 
 @media (max-width: 480px) {
   .Experience {
-    flex: 1 1 100%; /* On small screens, one card per row */
+    max-width: 100%; /* Take full width on small screens */
   }
 }
 

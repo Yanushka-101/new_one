@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
- // Replace with the correct path to the Morg image
+import { useState } from "react";
 
 function Experience() {
   const [visibleExperience, setVisibleExperience] = useState(0);
 
-  // Cycle through experiences with a delay
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleExperience((prev) => (prev === 1 ? 0 : 1)); // Toggle between 0 and 1
-    }, 5000); // Change experience every 5 seconds
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+  // Handler functions to navigate experiences
+  const handleNextExperience = () => {
+    setVisibleExperience((prev) => (prev === 1 ? 0 : 1));
+  };
+
+  const handlePreviousExperience = () => {
+    setVisibleExperience((prev) => (prev === 0 ? 1 : 0));
+  };
 
   return (
     <section id="experience">
@@ -29,7 +29,6 @@ function Experience() {
             <p>
               During my internship, I successfully developed a custom script to automate data backups, significantly reducing manual effort and minimizing the risk of data loss.
             </p>
-
           </div>
         )}
 
@@ -46,9 +45,12 @@ function Experience() {
             <p>
               In addition to front-end development, I manage backend database interactions using MongoDB and Firebase, facilitating seamless data management and integration. This position has enhanced my skills in mobile development and has provided me with valuable insights into agile methodologies and startup dynamics.
             </p>
-
           </div>
         )}
+      </div>
+      <div className="Experience-navigation">
+        <button onClick={handlePreviousExperience}>&#x3C;</button>
+        <button onClick={handleNextExperience}>&#x3E;</button>
       </div>
     </section>
   );
