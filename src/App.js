@@ -6,7 +6,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer'; 
 import Certificates from './components/Certificates'; 
 import Experience from './components/Experiance'; 
-import backgroundVideo from './Images/back.mp4'; // Import the video file
 import './styles/App.css';
 
 
@@ -28,11 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* Background Video */}
-      <video autoPlay muted loop className="background-video">
-        <source src={backgroundVideo} type="video/mp4" /> {/* Use the imported video */}
-        Your browser does not support the video tag.
-      </video>
+
       <Navbar />
       <About />
       <Projects />

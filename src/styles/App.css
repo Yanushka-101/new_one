@@ -1,7 +1,9 @@
 /* General styles */
 body {
-  margin: 0; /* Remove default margin */
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  background-color: #675c5c; /* Light gray background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px; /* Optional padding for spacing */
+  min-height: 100vh; /* Prevent horizontal overflow */
 }
 
 /* Video Background Styles */
@@ -194,12 +196,7 @@ section {
   color: #ffffffa9;
 }
 
-.new{
-  border-radius: 8px; /* Maintain rounded corners */
-  padding: 20px; 
-  color: #ffffffa9;
 
-}
 
 form {
   display: flex;
@@ -248,10 +245,9 @@ footer {
 
 #Certificates {
   padding: 50px;
-  color: #ffffffc5; 
-  font-family: 'Times New Roman', Times, serif;/* Removed background color */
+  color: #ffffffc5;
+  font-family: 'Times New Roman', Times, serif;
 }
-
 
 .Certificates-list {
   display: flex;
@@ -260,51 +256,131 @@ footer {
 }
 
 .Certificates {
-  flex: 1 1 calc(30% - 20px);
-  background: #42944286; /* Keeping a subtle background for project cards */
+  flex: 1 1 calc(30% - 20px); /* Each certificate will take 30% width with 20px gap */
+  background: rgba(66, 148, 66, 0.65); /* Subtle green background with transparency */
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+  position: relative; /* Position relative to show images */
 }
+
+.Certificates:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.Certificates h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff; /* Ensure text is readable on the background */
+}
+
+.Certificates p {
+  font-size: 1em;
+  color: #eaeaea; /* Slightly lighter text for better contrast */
+  margin-bottom: 15px;
+}
+
+.certificate-image {
+  display: none; /* Initially hide the certificate image */
+  position: absolute; /* Position it absolutely within the parent */
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Optional border around the image */
+  border-radius: 8px; /* Match the card's border radius */
+}
+
+.Certificates:hover .certificate-image {
+  display: block; /* Show the image on hover */
+}
+
+@media (max-width: 768px) {
+  .Certificates {
+    flex: 1 1 calc(45% - 20px); /* On medium screens, two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .Certificates {
+    flex: 1 1 100%; /* On small screens, one card per row */
+  }
+}
+
 
 #experience {
   padding: 50px;
   color: #ffffffc5;
-  font-family: 'Times New Roman', Times, serif; /* Removed background color */
+  font-family: 'Times New Roman', Times, serif;
 }
-/* Experience and Skills container */
-.experience-skills-container {
+
+.Experience-list {
   display: flex;
-  gap: 20px; /* Space between experience and skills sections */
-  padding: 20px;
-  color: #ffffffc5;
-
-   /* Add some padding around the container */
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Experience and Skills styles */
-.experience-list, .skills-list {
-  flex: 1; /* Both sections take equal space */
-  background: #42944286; /* Subtle background */
-  padding: 20px;
+.Experience {
+  flex: 1 1 calc(30% - 20px); /* Each experience item will take 30% width with 20px gap */
+  background: rgba(66, 148, 66, 0.65); /* Subtle green background with transparency */
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+  position: relative; /* Position relative to show images */
 }
 
-.experience-list h3, .skills-list h3 {
+.Experience:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.Experience h3 {
+  font-size: 1.5em;
   margin-bottom: 10px;
-   /* Add some space below headings */
+  color: #fff; /* Ensure text is readable on the background */
 }
 
-.skills-list ul {
-  list-style-type: disc;
-  padding-left: 20px;
-
-}
-
-.skills-list li {
+.Experience h4 {
+  font-size: 1.2em;
   margin-bottom: 5px;
-
+  color: #eaeaea; /* Slightly lighter text for better contrast */
 }
+
+.Experience p {
+  font-size: 1em;
+  color: #eaeaea; /* Slightly lighter text for better contrast */
+  margin-bottom: 15px;
+}
+
+.experience-image {
+  display: none; /* Initially hide the experience image */
+  position: absolute; /* Position it absolutely within the parent */
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Optional border around the image */
+  border-radius: 8px; /* Match the card's border radius */
+}
+
+.Experience:hover .experience-image {
+  display: block; /* Show the image on hover */
+}
+
+@media (max-width: 768px) {
+  .Experience {
+    flex: 1 1 calc(45% - 20px); /* On medium screens, two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .Experience {
+    flex: 1 1 100%; /* On small screens, one card per row */
+  }
+}
+
