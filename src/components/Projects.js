@@ -17,6 +17,27 @@ function Projects() {
           <h3>Autism Spectrum Disorder Checking App</h3>
           <p>This app leverages machine learning and voice analysis to assist in the early detection of Autism Spectrum Disorder (ASD). It analyzes voice recordings using advanced algorithms to identify potential indicators of ASD, with age-specific considerations for more accurate results. The app communicates with a local server powered by a neural network model built with Flask API, ensuring real-time feedback on analysis results. Easy to set up, the app enables quick assessment through an intuitive interface, contributing to early ASD detection and intervention e</p>
         </div>
+
+        <div className="project">
+          <h3>Autism Spectrum Disorder Checking App</h3>
+          <p>This app leverages machine learning and voice analysis to assist in the early detection of Autism Spectrum Disorder (ASD). It analyzes voice recordings using advanced algorithms to identify potential indicators of ASD, with age-specific considerations for more accurate results. The app communicates with a local server powered by a neural network model built with Flask API, ensuring real-time feedback on analysis results. Easy to set up, the app enables quick assessment through an intuitive interface, contributing to early ASD detection and intervention e</p>
+        </div>
+
+        <div className="project">
+          <h3>Autism Spectrum Disorder Checking App</h3>
+          <p>This app leverages machine learning and voice analysis to assist in the early detection of Autism Spectrum Disorder (ASD). It analyzes voice recordings using advanced algorithms to identify potential indicators of ASD, with age-specific considerations for more accurate results. The app communicates with a local server powered by a neural network model built with Flask API, ensuring real-time feedback on analysis results. Easy to set up, the app enables quick assessment through an intuitive interface, contributing to early ASD detection and intervention e</p>
+        </div>
+
+        <div className="project">
+          <h3>Autism Spectrum Disorder Checking App</h3>
+          <p>This app leverages machine learning and voice analysis to assist in the early detection of Autism Spectrum Disorder (ASD). It analyzes voice recordings using advanced algorithms to identify potential indicators of ASD, with age-specific considerations for more accurate results. The app communicates with a local server powered by a neural network model built with Flask API, ensuring real-time feedback on analysis results. Easy to set up, the app enables quick assessment through an intuitive interface, contributing to early ASD detection and intervention e</p>
+        </div>
+
+        <div className="project">
+          <h3>Autism Spectrum Disorder Checking App</h3>
+          <p>This app leverages machine learning and voice analysis to assist in the early detection of Autism Spectrum Disorder (ASD). It analyzes voice recordings using advanced algorithms to identify potential indicators of ASD, with age-specific considerations for more accurate results. The app communicates with a local server powered by a neural network model built with Flask API, ensuring real-time feedback on analysis results. Easy to set up, the app enables quick assessment through an intuitive interface, contributing to early ASD detection and intervention e</p>
+        </div>
+        
       </div>
     </section>
   );
