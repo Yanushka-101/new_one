@@ -120,6 +120,12 @@ section {
   cursor: pointer; /* Change cursor to pointer for better UX */
 }
 
+.about-image-single img {
+  height: 100%; /* Adjust the image height to fill the container */
+  width: auto; /* Maintain the aspect ratio */
+  max-height: 350px; /* Set a max height to keep it in line with the paragraph */
+  object-fit: cover; /* Ensure the image fits the container without distortion */
+}
 
 
 
