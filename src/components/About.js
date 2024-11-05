@@ -1,5 +1,9 @@
+
 import React from 'react';
-import photo from '../Images/react_photo1.jpg'; // Use relative path without 'my-app/src/'
+import Image1 from '../Images/1.png';
+import Image2 from '../Images/2.png';
+import Image3 from '../Images/3.png';
+import Image4 from '../Images/4.png';
 
 
 function About() {
@@ -16,8 +20,11 @@ function About() {
         </p>
         <button className="slide-button">Learn More</button> 
       </div>
-      <div className="about-image">
-        <img src={photo} alt="Yanushka" /> 
+      <div className="about-images">
+        <img src={Image1} alt="Project screenshot 1" />
+        <img src={Image2} alt="Project screenshot 2" />
+        <img src={Image3} alt="Workshop screenshot" />
+        <img src={Image4} alt="Code sample screenshot" />
       </div>
     </section>
   );
